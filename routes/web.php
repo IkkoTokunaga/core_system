@@ -17,3 +17,8 @@ use App\Http\Controllers\Auth\AuthController;
 Route::get('/', [AuthController::class, 'show_login'])->name('showLogin');
 
 Route::post('/', [AuthController::class, 'login'])->name('login');
+
+// ホーム画面
+Route::get('home', function(){
+    return view('home');
+})->name('home');
